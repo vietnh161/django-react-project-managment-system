@@ -1,0 +1,172 @@
+{
+  "users": [
+    {
+      "username": "johndoe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "johndoe@yahoo.com",
+      "password": "12345",
+      "image": "user1.png"
+    },
+    {
+      "username": "johndoe1",
+      "first_name": "John",
+      "last_name": "Doe 1",
+      "email": "johndoe1@yahoo.com",
+      "password": "12345",
+      "image": "user2.png"
+    },
+    {
+      "username": "carolryan100",
+      "first_name": "Carol",
+      "last_name": "Ryan",
+      "email": "carolryan100@yahoo.com",
+      "password": "12345",
+      "image": "user1.png"
+    },
+    {
+      "username": "jeromelang",
+      "first_name": "Jerome",
+      "last_name": "Lang",
+      "email": "jeromelang@aol.com",
+      "password": "12345",
+      "image": "user2.png"
+    },
+    {
+      "username": "naomipatterson8769",
+      "first_name": "Naomi",
+      "last_name": "Patterson",
+      "email": "naomipatterson8769@google.org",
+      "password": "12345",
+      "image": "user3.png"
+    },
+    {
+      "username": "mosesadkins",
+      "first_name": "Moses",
+      "last_name": "Adkins",
+      "email": "mosesadkins@aol.edu",
+      "password": "12345",
+      "image": "user4.png"
+    },
+    {
+      "username": "jennacarver5726",
+      "first_name": "Jenna",
+      "last_name": "Carver",
+      "email": "jennacarver5726@yahoo.ca",
+      "password": "12345",
+      "image": "user5.png"
+    },
+    {
+      "username": "ardencross1211",
+      "first_name": "Arden",
+      "last_name": "Cross",
+      "email": "ardencross1211@yahoo.ca",
+      "password": "12345",
+      "image": "user6.png"
+    },
+    {
+      "username": "warrenodonnell2520",
+      "first_name": "Warren",
+      "last_name": "O'donnell",
+      "email": "warrenodonnell2520@protonmail.org",
+      "password": "12345",
+      "image": "user7.png"
+    },
+    {
+      "username": "ingridsampson",
+      "first_name": "Ingrid",
+      "last_name": "Sampson",
+      "email": "ingridsampson@icloud.couk",
+      "password": "12345",
+      "image": "user8.png"
+    },
+    {
+      "username": "yasirwaters3198",
+      "first_name": "Yasir",
+      "last_name": "Waters",
+      "email": "yasirwaters3198@hotmail.net",
+      "password": "",
+      "image": "user9.png"
+    },
+    {
+      "username": "lillianhubbard",
+      "first_name": "Lillian",
+      "last_name": "Hubbard",
+      "email": "lillianhubbard@icloud.net",
+      "password": "12345",
+      "image": "user10.png"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Small Plastic Car",
+      "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+      "owner": "johndoe",
+      "short_name": "SPC",
+      "members": [
+        { "username": "johndoe" },
+        { "username": "johndoe1" },
+        { "username": "ardencross1211" },
+        { "username": "jennacarver5726" },
+        { "username": "warrenodonnell2520" },
+        { "username": "jeromelang" }
+      ],
+      "kanban_columns": [
+        { "name": "To Do", "position": 1, "status": "TODO" },
+        { "name": "In Progress", "position": 2, "status": "IN_PROGRESS" },
+        { "name": "Blocked", "position": 3, "status": "BLOCKED" },
+        { "name": "Done", "position": 4, "status": "DONE" }
+      ],
+      "sprints": [
+        {
+          "name": "Sprint 1",
+          "start_date": "2025-03-15T00:00:00Z",
+          "end_date": "2025-03-29T23:59:59Z"
+        }
+      ],
+      "tags": ["urgent", "feature", "bug"],
+      "tasks": [
+        {
+          "title": "Parent Task: Build Feature X",
+          "description": "Main task for feature X",
+          "assigned_to": "johndoe1",
+          "created_by": "johndoe",
+          "kanban_column": "To Do",
+          "sprint": "Sprint 1",
+          "status": "TODO",
+          "type": "USER_STORY",
+          "priority": "MEDIUM",
+          "deadline": "2025-03-25T00:00:00Z",
+          "tags": ["feature", "urgent"],
+          "subtasks": [
+            {
+              "title": "Subtask: Design UI",
+              "description": "Design the UI for feature X",
+              "assigned_to": "johndoe1",
+              "created_by": "johndoe1",
+              "kanban_column": "To Do",
+              "sprint": "Sprint 1",
+              "status": "TODO",
+              "type": "FEATURE",
+              "priority": "MEDIUM",
+              "deadline": "2025-03-20T00:00:00Z"
+            },
+            {
+              "title": "Subtask: Bug UI",
+              "description": "Bug",
+              "created_by": "johndoe1",
+              "assigned_to": "johndoe1",
+              "kanban_column": "In Progress",
+              "sprint": "Sprint 1",
+              "status": "TODO",
+              "type": "BUG",
+              "priority": "HIGH",
+              "deadline": "2025-03-20T00:00:00Z",
+              "tags": ["urgent"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
