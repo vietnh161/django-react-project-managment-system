@@ -18,13 +18,13 @@ class UserProfile(models.Model):
 
 class Project(models.Model):
     name = models.CharField(max_length=100)
-    short_name = models.CharField(
+    key = models.CharField(
         max_length=100,
         unique=True,
         validators=[
             RegexValidator(
                 regex=r"^[A-Za-z0-9]+$",
-                message="Short name can only contain letters and numbers.",
+                message="Key can only contain letters and numbers.",
                 code="invalid_alias_id",
             )
         ],
@@ -102,7 +102,7 @@ class Sprint(models.Model):
     name = models.CharField(max_length=50)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=False, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now_add=True)
 
@@ -125,12 +125,13 @@ class Sprint(models.Model):
 
 class Tag(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name="tags")
-    name = models.CharField(max_length=50, unique=True)
+    name = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         verbose_name = "Tag"
         verbose_name_plural = "Tags"
+        unique_together = ("project", "name")
 
     def __str__(self):
         return self.name
@@ -209,7 +210,7 @@ class Task(models.Model):
             super().save(*args, **kwargs)
 
         if not self.aliasId:
-            initials = self.project.short_name
+            initials = self.project.key
             self.aliasId = f"{initials}-{self.id}"
             super().save(update_fields=["aliasId"])
 

@@ -9,6 +9,7 @@ python-dotenv = "*"
 black = "*"
 djangorestframework = "*"
 drf-spectacular = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 

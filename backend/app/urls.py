@@ -1,5 +1,5 @@
 from django.urls import path, include
-from rest_framework.routers import DefaultRouter
+from rest_framework.routers import SimpleRouter
 from .views import ProjectViewSet, SprintViewSet, TaskViewSet
 from drf_spectacular.views import (
     SpectacularAPIView,
@@ -7,7 +7,7 @@ from drf_spectacular.views import (
     SpectacularRedocView,
 )
 
-router = DefaultRouter()
+router = SimpleRouter(trailing_slash=False)
 router.register(r"projects", ProjectViewSet)
 router.register(r"sprints", SprintViewSet)
 router.register(r"tasks", TaskViewSet)

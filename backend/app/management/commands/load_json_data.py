@@ -58,9 +58,10 @@ class Command(BaseCommand):
             owner = User.objects.get(username=project_data["owner"])
             project, _ = Project.objects.get_or_create(
                 name=project_data["name"],
+                image=project_data["image"],
                 defaults={
                     "description": project_data.get("description"),
-                    "short_name": project_data.get("short_name"),
+                    "key": project_data.get("key"),
                     "owner": owner,
                 },
             )
@@ -81,6 +82,7 @@ class Command(BaseCommand):
                 Sprint.objects.get_or_create(
                     project=project,
                     name=sprint_data["name"],
+                    is_active=sprint_data["is_active"],
                     defaults={
                         "start_date": timezone.datetime.fromisoformat(
                             sprint_data["start_date"]
