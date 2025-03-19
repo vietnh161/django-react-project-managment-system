@@ -102,7 +102,8 @@
       "name": "Small Plastic Car",
       "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
       "owner": "johndoe",
-      "short_name": "SPC",
+      "image": "project1.png",
+      "key": "SPC",
       "members": [
         { "username": "johndoe" },
         { "username": "johndoe1" },
@@ -121,15 +122,199 @@
         {
           "name": "Sprint 1",
           "start_date": "2025-03-15T00:00:00Z",
+          "is_active": false,
+          "end_date": "2025-03-29T23:59:59Z"
+        },
+        {
+          "name": "Sprint 2",
+          "is_active": true,
+          "start_date": "2025-03-30T00:00:00Z",
+          "end_date": "2025-04-14T23:59:59Z"
+        },
+        {
+          "name": "Sprint 3",
+          "is_active": false,
+          "start_date": "2025-04-15T00:00:00Z",
+          "end_date": "2025-04-29T23:59:59Z"
+        }
+      ],
+      "tags": ["urgent", "feature", "bug"],
+      "tasks": [
+        {
+          "title": "Grand Basset Griffon Vendéen",
+          "description": "Grand Basset Griffon Vendéen",
+          "assigned_to": "johndoe1",
+          "created_by": "johndoe",
+          "kanban_column": "To Do",
+          "sprint": "Sprint 2",
+          "status": "TODO",
+          "type": "USER_STORY",
+          "priority": "MEDIUM",
+          "deadline": "2025-03-25T00:00:00Z",
+          "tags": ["feature", "urgent"],
+          "subtasks": [
+            {
+              "title": "Chartreux",
+              "description": "Chartreux",
+              "assigned_to": "johndoe1",
+              "created_by": "johndoe1",
+              "kanban_column": "To Do",
+              "sprint": "Sprint 2",
+              "status": "TODO",
+              "type": "FEATURE",
+              "priority": "MEDIUM",
+              "tags": [],
+              "deadline": "2025-03-20T00:00:00Z"
+            },
+            {
+              "title": "Licensed Plastic Bacon",
+              "description": "Licensed Plastic Bacon",
+              "created_by": "johndoe1",
+              "assigned_to": "johndoe1",
+              "kanban_column": "In Progress",
+              "sprint": "Sprint 2",
+              "status": "TODO",
+              "type": "BUG",
+              "priority": "HIGH",
+              "deadline": "2025-03-20T00:00:00Z",
+              "tags": ["bug"]
+            }
+          ]
+        },
+        {
+          "title": "Perro Majorero",
+          "description": "Perro Majorero",
+          "assigned_to": "johndoe1",
+          "created_by": "johndoe",
+          "kanban_column": "To Do",
+          "sprint": "Sprint 2",
+          "status": "TODO",
+          "type": "USER_STORY",
+          "priority": "MEDIUM",
+          "deadline": "2025-03-25T00:00:00Z",
+          "tags": ["feature"],
+          "subtasks": []
+        },
+        {
+          "title": "Australian Stumpy Tail Cattle Dog",
+          "description": "Australian Stumpy Tail Cattle Dog",
+          "assigned_to": "warrenodonnell2520",
+          "created_by": "warrenodonnell2520",
+          "kanban_column": "To Do",
+          "sprint": "Sprint 1",
+          "status": "TODO",
+          "type": "USER_STORY",
+          "priority": "MEDIUM",
+          "deadline": "2025-03-25T00:00:00Z",
+          "tags": ["feature", "urgent"],
+          "subtasks": []
+        },
+        {
+          "title": "Cirneco dell'Etna",
+          "description": "Cirneco dell'Etna",
+          "assigned_to": "warrenodonnell2520",
+          "created_by": "johndoe",
+          "kanban_column": "To Do",
+          "sprint": "Sprint 1",
+          "status": "TODO",
+          "type": "USER_STORY",
+          "priority": "MEDIUM",
+          "deadline": "2025-03-25T00:00:00Z",
+          "tags": ["feature", "urgent"],
+          "subtasks": []
+        }
+      ]
+    },
+    {
+      "name": "Modern Fresh Bike",
+      "description": "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
+      "owner": "johndoe",
+      "image": "project2.png",
+      "key": "NFB",
+      "members": [
+        { "username": "johndoe" },
+        { "username": "johndoe1" },
+        { "username": "ardencross1211" },
+        { "username": "warrenodonnell2520" },
+        { "username": "lillianhubbard" }
+      ],
+      "kanban_columns": [
+        { "name": "To Do", "position": 1, "status": "TODO" },
+        { "name": "In Progress", "position": 2, "status": "IN_PROGRESS" },
+        { "name": "Blocked", "position": 3, "status": "BLOCKED" },
+        { "name": "Done", "position": 4, "status": "DONE" }
+      ],
+      "sprints": [
+        {
+          "name": "Sprint 1",
+          "is_active": true,
+          "start_date": "2025-03-15T00:00:00Z",
+          "end_date": "2025-03-29T23:59:59Z"
+        }
+      ],
+      "tags": ["urgent"],
+      "tasks": [
+        {
+          "title": "Portuguese Water Dog",
+          "description": "",
+          "assigned_to": "lillianhubbard",
+          "created_by": "johndoe",
+          "kanban_column": "To Do",
+          "sprint": "Sprint 1",
+          "status": "TODO",
+          "type": "USER_STORY",
+          "priority": "MEDIUM",
+          "deadline": "2025-03-25T00:00:00Z",
+          "tags": ["urgent"],
+          "subtasks": []
+        },
+        {
+          "title": "Westphalian Dachsbracke",
+          "description": "",
+          "assigned_to": "warrenodonnell2520",
+          "created_by": "johndoe",
+          "kanban_column": "To Do",
+          "sprint": "Sprint 1",
+          "status": "TODO",
+          "type": "USER_STORY",
+          "priority": "MEDIUM",
+          "deadline": "2025-03-25T00:00:00Z",
+          "tags": [],
+          "subtasks": []
+        }
+      ]
+    },
+    {
+      "name": "Elegant Cotton Pizza",
+      "description": "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
+      "image": "project3.png",
+      "owner": "johndoe",
+      "key": "ECP",
+      "members": [
+        { "username": "johndoe" },
+        { "username": "johndoe1" },
+        { "username": "ardencross1211" }
+      ],
+      "kanban_columns": [
+        { "name": "To Do", "position": 1, "status": "TODO" },
+        { "name": "In Progress", "position": 2, "status": "IN_PROGRESS" },
+        { "name": "Blocked", "position": 3, "status": "BLOCKED" },
+        { "name": "Done", "position": 4, "status": "DONE" }
+      ],
+      "sprints": [
+        {
+          "name": "Sprint 1",
+          "is_active": true,
+          "start_date": "2025-03-15T00:00:00Z",
           "end_date": "2025-03-29T23:59:59Z"
         }
       ],
       "tags": ["urgent", "feature", "bug"],
       "tasks": [
         {
-          "title": "Parent Task: Build Feature X",
-          "description": "Main task for feature X",
-          "assigned_to": "johndoe1",
+          "title": "Japanese Terrier",
+          "description": "Japanese Terrier",
+          "assigned_to": "ardencross1211",
           "created_by": "johndoe",
           "kanban_column": "To Do",
           "sprint": "Sprint 1",
@@ -140,31 +325,76 @@
           "tags": ["feature", "urgent"],
           "subtasks": [
             {
-              "title": "Subtask: Design UI",
-              "description": "Design the UI for feature X",
-              "assigned_to": "johndoe1",
+              "title": "Spanish Mastiff",
+              "description": "Spanish Mastiff",
+              "assigned_to": "ardencross1211",
               "created_by": "johndoe1",
               "kanban_column": "To Do",
               "sprint": "Sprint 1",
               "status": "TODO",
               "type": "FEATURE",
               "priority": "MEDIUM",
+              "tags": [],
               "deadline": "2025-03-20T00:00:00Z"
-            },
-            {
-              "title": "Subtask: Bug UI",
-              "description": "Bug",
-              "created_by": "johndoe1",
-              "assigned_to": "johndoe1",
-              "kanban_column": "In Progress",
-              "sprint": "Sprint 1",
-              "status": "TODO",
-              "type": "BUG",
-              "priority": "HIGH",
-              "deadline": "2025-03-20T00:00:00Z",
-              "tags": ["urgent"]
             }
           ]
+        },
+        {
+          "title": "Ibizan Hound",
+          "description": "Ibizan Hound",
+          "assigned_to": "ardencross1211",
+          "created_by": "johndoe",
+          "kanban_column": "To Do",
+          "sprint": "Sprint 1",
+          "status": "TODO",
+          "type": "USER_STORY",
+          "priority": "MEDIUM",
+          "deadline": "2025-03-25T00:00:00Z",
+          "tags": [],
+          "subtasks": []
+        }
+      ]
+    },
+    {
+      "name": "Rustic Bronze Fish",
+      "description": "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
+      "owner": "johndoe",
+      "image": "project4.png",
+      "key": "RBF",
+      "members": [
+        { "username": "johndoe" },
+        { "username": "johndoe1" },
+        { "username": "ardencross1211" }
+      ],
+      "kanban_columns": [
+        { "name": "To Do", "position": 1, "status": "TODO" },
+        { "name": "In Progress", "position": 2, "status": "IN_PROGRESS" },
+        { "name": "Blocked", "position": 3, "status": "BLOCKED" },
+        { "name": "Done", "position": 4, "status": "DONE" }
+      ],
+      "sprints": [
+        {
+          "name": "Sprint 1",
+          "start_date": "2025-03-15T00:00:00Z",
+          "is_active": true,
+          "end_date": "2025-03-29T23:59:59Z"
+        }
+      ],
+      "tags": ["urgent", "feature"],
+      "tasks": [
+        {
+          "title": "Old English Sheepdog",
+          "description": "Old English Sheepdog",
+          "assigned_to": "johndoe1",
+          "created_by": "johndoe",
+          "kanban_column": "To Do",
+          "sprint": "Sprint 1",
+          "status": "TODO",
+          "type": "USER_STORY",
+          "priority": "MEDIUM",
+          "deadline": "2025-03-25T00:00:00Z",
+          "tags": ["feature", "urgent"],
+          "subtasks": []
         }
       ]
     }
