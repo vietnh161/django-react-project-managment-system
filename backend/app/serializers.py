@@ -16,7 +16,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ["id", "username", "email", "image"]
+        fields = ["id", "username", "email", "image", "first_name", "last_name"]
 
     def get_image(self, obj):
         try:
@@ -62,6 +62,7 @@ class TaskSerializer(serializers.ModelSerializer):
         model = Task
         fields = [
             "id",
+            "alias_id",
             "title",
             "description",
             "assigned_to",

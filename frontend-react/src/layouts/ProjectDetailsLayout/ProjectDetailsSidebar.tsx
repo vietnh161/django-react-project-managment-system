@@ -5,6 +5,7 @@ import {
   IconButton,
   MenuItem,
   SvgIconTypeMap,
+  Typography,
 } from '@mui/material';
 import React, { ReactElement, useState } from 'react';
 import PeopleIcon from '@mui/icons-material/People';
@@ -15,7 +16,10 @@ import { appColors } from '@/configs/layout.config';
 import { OverridableComponent } from '@mui/material/OverridableComponent';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import SettingsIcon from '@mui/icons-material/Settings';
 import { Project } from '@/models/Project';
+import ServerImage from '@/components/ServerImage';
+
 const SidebarMenuItem: React.FC<{
   to: string;
   label: string;
@@ -104,14 +108,41 @@ const ProjectDetailsSidebar: React.FC<{ project?: Project }> = ({
       >
         <Box
           sx={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: 1,
             padding: 3,
             marginBottom: 2,
             borderBottom: 'solid 1px',
             borderColor: colors.grey[300],
-            fontWeight: 600,
+            img: {
+              width: 40,
+              height: 40,
+              objectFit: 'contain',
+            },
           }}
         >
-          {project?.name}
+          <ServerImage
+            src={`project/${project?.image}`}
+          ></ServerImage>
+          <Box>
+            <Typography
+              sx={{
+                textTransform: 'uppercase',
+                fontSize: 10,
+                fontWeight: 400,
+              }}
+            >
+              Project
+            </Typography>
+            <Typography
+              sx={{
+                fontWeight: 500,
+              }}
+            >
+              {project?.name}
+            </Typography>
+          </Box>
         </Box>
         <Box>
           <SidebarMenuItem
@@ -130,6 +161,7 @@ const ProjectDetailsSidebar: React.FC<{ project?: Project }> = ({
             label="Reports"
             Icon={StackedBarChartIcon}
           />
+          <SidebarMenuItem to={'b'} label="Settings" Icon={SettingsIcon} />
         </Box>
       </Box>
     </Box>

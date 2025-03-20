@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+### .env file
+```bash
+REACT_APP_DJANGO_API_ENDPOINT=http://localhost:3003/api
+REACT_APP_DJANGO_STATIC_IMAGES_ENDPOINT=http://localhost:3003/static/image
+```
+
 In the project directory, you can run:
 
 ### `npm start`

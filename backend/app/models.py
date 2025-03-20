@@ -159,7 +159,7 @@ class Task(models.Model):
         ("LOWEST", "Lowest"),
     )
 
-    aliasId = models.CharField(max_length=200, null=True, blank=True, unique=True)
+    alias_id = models.CharField(max_length=200, null=True, blank=True, unique=True)
     image = models.CharField(max_length=250, null=True, blank=True)
     background = models.CharField(max_length=250, null=True, blank=True)
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name="tasks")
@@ -209,10 +209,10 @@ class Task(models.Model):
         if not self.id:
             super().save(*args, **kwargs)
 
-        if not self.aliasId:
+        if not self.alias_id:
             initials = self.project.key
-            self.aliasId = f"{initials}-{self.id}"
-            super().save(update_fields=["aliasId"])
+            self.alias_id = f"{initials}-{self.id}"
+            super().save(update_fields=["alias_id"])
 
     def get_all_subtasks(self):
         return Task.objects.filter(parent=self)

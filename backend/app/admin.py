@@ -35,7 +35,7 @@ class SprintAdmin(admin.ModelAdmin):
 class TaskAdmin(admin.ModelAdmin):
     list_display = [
         "pk",
-        "aliasId",
+        "alias_id",
         "title",
         "description",
         "assigned_to",

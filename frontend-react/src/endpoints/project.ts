@@ -1,4 +1,4 @@
-import { Project } from "@/models/Project";
+import { Project, ProjectDetails } from "@/models/Project";
 import { axiosAPI, baseApi } from "./api";
 
 export const getProjects = async () => {
@@ -14,7 +14,7 @@ export const postApi = baseApi.injectEndpoints({
     getProject: builder.query<Project, string>({
       query: (id) => `/projects/${id}`,
     }),
-    getProjectDetails: builder.query<Project, string>({
+    getProjectDetails: builder.query<ProjectDetails, string>({
       query: (id) => `/projects/${id}/details`,
     }),
   }),
